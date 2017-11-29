@@ -1,0 +1,22 @@
+{
+  "name": "jarvis",
+  "version": "1.0.0",
+  "description": "Jarvis is aweseome",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aking28/web-bootcamp.git"
+  },
+  "author": "majestica",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aking28/web-bootcamp/issues"
+  },
+  "homepage": "https://github.com/aking28/web-bootcamp#readme",
+  "dependencies": {
+    "marvel-api": "^1.1.0"
+  }
+}
