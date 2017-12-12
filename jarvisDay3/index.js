@@ -1,22 +1,30 @@
-let program = require('commander')
-let api = require('marvel-api')
 
-let marvel = api.createClient({
- publicKey:'22e6228e29ad372f558b4d6c2bd1fab9',
- privateKey:'80873a49b6da7d22bfe5e5d7b8aef2929d5f4859'
-  })
+let program = require('commander')
+let Marvel  = require('./marvel')
+
 program
   .command('avengers')
   .action(() =>  {
     console.log('avengers')
-    marvel.creators.findAll()
-  .then(console.log)
-  .fail(console.error)
-  .done();
+   let marvel = Marvel()
+   marvel.getAvengers() 
 })
 
-program.parse(process.argv)
+program
+    .command('thor')
+    .action(() => {
+      conslole.log('thor')
+     let marvel = Marvel()
+     marvel.getThor()
+})
 
-if(!program.args.length) { 
-	program.help()
-} 
+program.parse(prcess.argv)
+
+if(!program.args.length) {
+  program.help()
+}
+
+module.export = Marvel
+
+
+ 
