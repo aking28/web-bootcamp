@@ -6,6 +6,16 @@ let MongoClient = require('mongodb').MongoClient
 app.use('/', express.static('app'))
 
 app.get('/api/heroes', (request, response) => {
+  response.json(
+   // [
+     // {
+       // title: 'Thor',
+       // image: '/images/thor-thumb.png',
+       // description: 'Norse God of thunder and lightening. 
+       // link: 'http://marvel.com/universe/Hulk_(Bruce_Banner)#axzz502Le2Ees',
+       // linkText: 'More info on Thor'
+     // }, 
+   // ]  
 
   MongoClient.connect('mongodb://localhost:27017/Marvel', (connectError, db) => {
     assert.equal(null, connectError)
@@ -20,6 +30,7 @@ app.get('/api/heroes', (request, response) => {
     })
   })
 })
+// )
 
 app.set('port', process.env.PORT || process.env.VCAP_APP_PORT || 3000)
 

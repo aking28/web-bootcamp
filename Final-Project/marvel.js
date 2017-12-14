@@ -7,8 +7,8 @@ program
     console.log('avengers')
     let marvel = Marvel()
     marvel.getAvengers()
-}) 
-program.parse(process.argv)
+ }) 
+ program.parse(process.argv)
 
 
 program
@@ -20,8 +20,7 @@ program
 })
 
 program.parse(process.argv)
-
-if(!program.args.length) {
+  if(!program.args.length) {
   program.help()
 }
 

@@ -28,7 +28,7 @@ export default class Dashboard {
     container.id = 'container'
 
     let title = document.createElement('div')
-     title.id = 'title'
+    title.id = 'title'
     title.style.color = '#dddddd'
     title.style.marginTop = '20px'
     title.style.marginLeft = '1%'
